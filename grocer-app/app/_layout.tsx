@@ -9,6 +9,11 @@ export default function RootLayout() {
       <Stack.Screen name='product' options={{
         headerShown: false,
       }}/>
+
+  <Stack.Screen name='creatList' options={{
+        headerShown: false,
+        presentation: 'modal',
+      }}/>
       
     </Stack>
   );

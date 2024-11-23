@@ -6,6 +6,7 @@ export default function ItemCard({val}){
     const onPress = () =>{
         
         router.push('/item');
+        //should have some fetch request
     }
     
     const style = StyleSheet.create({

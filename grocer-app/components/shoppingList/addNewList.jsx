@@ -1,6 +1,13 @@
-import {View, Text, StyleSheet} from 'react-native';
+import { useRouter } from 'expo-router';
+import {View, Text, StyleSheet, TouchableHighlight} from 'react-native';
 
-export default function AddNewList({onClick}){
+export default function AddNewList(){
+    const router = useRouter();
+
+    const onPress = ()=>{
+        router.push('/createList')
+    }
+
     const style = StyleSheet.create({
         list:{
             flex: 1,
@@ -14,10 +21,13 @@ export default function AddNewList({onClick}){
     });
 
     return (
-        <View style = {style.list} >
-            <Text>
-                Add new Shopping List
-            </Text>
-        </View>
+        <TouchableHighlight onPress={onPress}>
+            <View style = {style.list} >
+                <Text>
+                    Add new Shopping List
+                </Text>
+            </View>
+        </TouchableHighlight>
+
     );
 }
