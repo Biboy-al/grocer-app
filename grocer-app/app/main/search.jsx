@@ -43,6 +43,9 @@ export default function Search(){
            />
 
            <ContentContainer>
+                <Text>
+                    Good deals
+                </Text>
                 {
                     items.map((val, id)=>(
                         <SearchContent val ={val}/>
