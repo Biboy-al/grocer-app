@@ -5,7 +5,6 @@ export default function mainLayout(){
         <Tabs screenOptions={{headerShown: false}}>
             <Tabs.Screen name='search'/>
             <Tabs.Screen name='shoppingList'/>
-            
             <Tabs.Screen name='Setting'/>
         </Tabs>
     );
