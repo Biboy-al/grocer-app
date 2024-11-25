@@ -1,24 +1,61 @@
-import {View, Text, StyleSheet, Modal} from 'react-native';
+import {View, Text, StyleSheet, TextInput} from 'react-native';
 import { useState } from 'react';
+import { SearchBar } from 'react-native-elements';
+import ItemContainer from '@/components/createList/itemContainer'
 
 export default function CreateList(){
-    const [modalVisible, setModalVisible] = useState(false);
+    const [toSearch, setToSearch] = useState("");
+    const [listName, setListName] = useState("name List");
+
+    const style = StyleSheet.create({
+        mainView: {
+            flex: 1,
+            padding: 10,
+        },
+
+        listTitle: {
+            borderBottomWidth: 2,
+            borderColor: 'black',
+            fontSize: 25
+        },
+
+        searchContainer:{
+           
+            alignContent:'center',
+            backgroundColor: 'transparent',
+            borderWidth: 0,
+            borderTopWidth: 0,
+            borderBottomWidth: 0,
+        },
+
+        inputStyleContainer:{
+            backgroundColor: 'white',
+            width: 350,
+            borderRadius: 15,
+        },
+    });
 
     return (
-        
-        <Modal  animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => {
-          Alert.alert('Modal has been closed.');
-          setModalVisible(!modalVisible);
-        }}>
-            <View>
-                <Text>
-                    This is the Create shopping list
-                </Text>
+
+            <View style= {style.mainView}>
+                <TextInput 
+                    style = {style.listTitle}
+                    value={listName}
+                    onChangeText={setListName}/>
+                <SearchBar 
+                    onChangeText={setToSearch}
+                    lightTheme={true}
+                    value={toSearch}
+                    containerStyle = {style.searchContainer} 
+                    inputContainerStyle = {style.inputStyleContainer}
+                    placeholder='Milk...'
+                />
+
+
+                <ItemContainer>
+
+                </ItemContainer>
             </View>
-        </Modal>
-        
+
     );
 }
