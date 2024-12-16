@@ -36,7 +36,7 @@ export default function Search(){
 
         inputStyleContainer:{
             backgroundColor: 'white',
-            width: 350,
+            width: 400,
             borderRadius: 15,
         },
 
@@ -62,7 +62,7 @@ export default function Search(){
                 </Text>
                 {
                     items.map((val, id)=>(
-                        <ItemCard val ={val}/>
+                        <ItemCard val ={val} id={id}/>
                     ))
                 }
            </ContentContainer>

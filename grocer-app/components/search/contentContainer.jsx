@@ -5,11 +5,11 @@ export default function ContentContainer({children}){
 
     const style = StyleSheet.create({
         mainContainer :{
-            maxHeight: 550,
-            width: 350,
+            width: 400,
             padding: 10,
             gap: 10,
             backgroundColor: 'white',
+            borderRadius: 10,
 
         }
     });

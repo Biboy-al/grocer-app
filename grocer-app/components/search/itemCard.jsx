@@ -3,6 +3,7 @@ import { useRouter } from 'expo-router';
 
 export default function ItemCard({val}){
     const router = useRouter();
+    
     const onPress = () =>{
         
         router.push('/item');
@@ -11,17 +12,18 @@ export default function ItemCard({val}){
     
     const style = StyleSheet.create({
         item :{
-            height: 75,
+            height: 100,
             backgroundColor: 'gray',
-            padding: 5
+            padding: 5,
+            borderRadius: 10,
         },
         img:{
             flex: 1,
-            height: 65,
-            width: 65,
+            width: 90,
             justifyContent: 'center',
             alignItems: 'center',
             backgroundColor: 'white',
+            borderRadius: 10,
         }
     });
 
