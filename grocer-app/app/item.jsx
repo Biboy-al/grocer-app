@@ -6,9 +6,10 @@ export default function Product(){
 
         itemContainer: {
             flex: 1,
-            padding: 10,
+            padding: 15,
             alignItems: 'center',
             rowGap: 10,
+
         },
 
         header: {

@@ -8,6 +8,8 @@ export default function ContentContainer({children}){
             width: 400,
             padding: 10,
             gap: 10,
+            maxHeight: 500,
+            minHeight: 300,
             backgroundColor: 'white',
             borderRadius: 10,
 

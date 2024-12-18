@@ -7,7 +7,7 @@ export default function shoppingList(){
     const lists = [1]
     const style = StyleSheet.create({
         shoppingList:{
-            padding:10,
+            padding:15,
             bottomPadding: 20,
 
         }
